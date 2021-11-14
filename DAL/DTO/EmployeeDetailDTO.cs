@@ -19,7 +19,7 @@ namespace DAL.DTO
         public int Salary { get; set; }
         public bool isAdmin { get; set; }
         public string ImagePath { get; set; }
-        public string Adress { get; set; }
+        public string Address { get; set; }
         public DateTime Birthdate { get; set; }
     }
 }
