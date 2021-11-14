@@ -15,5 +15,11 @@ namespace DAL.DTO
         public string DeparmentName { get; set; }
         public string PositionName { get; set; }
         public int DeparmentID { get; set; }
+        public int PositionID { get; set; }
+        public int Salary { get; set; }
+        public bool isAdmin { get; set; }
+        public string ImagePath { get; set; }
+        public string Adress { get; set; }
+        public DateTime Birthdate { get; set; }
     }
 }
