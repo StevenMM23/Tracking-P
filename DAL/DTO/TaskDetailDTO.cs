@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.DTO
 {
-    public class EmployeeDetailDTO
+    class TaskDetailDTO
     {
         public int EmployeeID { get; set; }
         public int UserNo { get; set; }
@@ -17,10 +17,12 @@ namespace DAL.DTO
         public string PositionName { get; set; }
         public int DeparmentID { get; set; }
         public int PositionID { get; set; }
-        public int Salary { get; set; }
-        public bool isAdmin { get; set; }
-        public string ImagePath { get; set; }
-        public string Address { get; set; }
-        public DateTime? Birthdate { get; set; }
+        public int TaskID { get; set; }
+        public string Title { get; set; }
+        public string Content { get; set; }
+        public string TaskStatement { get; set; }
+        public DateTime TaskStartDate { get; set; }
+        public DateTime TaskDeliveryDate { get; set; }
+        
     }
 }

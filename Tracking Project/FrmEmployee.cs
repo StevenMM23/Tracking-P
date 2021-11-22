@@ -119,6 +119,8 @@ namespace Tracking_Project
                 MessageBox.Show("Department is Empty");
             else if (IsEmptyCombo(cmbPosition))
                 MessageBox.Show("Position is Empty");
+            else if (IsEmptyTxt(txtImagePath))
+                MessageBox.Show("Image path is Empty");
             else
             {
                 Employee employee = new Employee();
@@ -161,6 +163,16 @@ namespace Tracking_Project
 
 
             }
+        }
+
+        private void txtSalary_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtSalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = General.IsNumber(e);
         }
     }
 }

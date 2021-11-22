@@ -67,6 +67,7 @@ namespace Tracking_Project
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 150);
@@ -75,6 +76,7 @@ namespace Tracking_Project
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(509, 487);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
             // panel2
             // 
@@ -97,6 +99,7 @@ namespace Tracking_Project
             this.cmbPosition.Name = "cmbPosition";
             this.cmbPosition.Size = new System.Drawing.Size(200, 33);
             this.cmbPosition.TabIndex = 1;
+            this.cmbPosition.SelectedIndexChanged += new System.EventHandler(this.cmbPosition_SelectedIndexChanged);
             // 
             // cmbDepartment
             // 
@@ -106,6 +109,7 @@ namespace Tracking_Project
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(200, 33);
             this.cmbDepartment.TabIndex = 0;
+            this.cmbDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbDepartment_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -113,7 +117,7 @@ namespace Tracking_Project
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(19, 78);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 25);
+            this.label5.Size = new System.Drawing.Size(97, 25);
             this.label5.TabIndex = 9;
             this.label5.Text = "Position";
             // 
@@ -123,7 +127,7 @@ namespace Tracking_Project
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(19, 29);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 25);
+            this.label4.Size = new System.Drawing.Size(133, 25);
             this.label4.TabIndex = 10;
             this.label4.Text = "Department";
             // 
@@ -133,7 +137,7 @@ namespace Tracking_Project
             this.txtSurname.Location = new System.Drawing.Point(186, 121);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.ReadOnly = true;
-            this.txtSurname.Size = new System.Drawing.Size(213, 26);
+            this.txtSurname.Size = new System.Drawing.Size(213, 27);
             this.txtSurname.TabIndex = 7;
             // 
             // txtName
@@ -142,7 +146,7 @@ namespace Tracking_Project
             this.txtName.Location = new System.Drawing.Point(186, 69);
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(213, 26);
+            this.txtName.Size = new System.Drawing.Size(213, 27);
             this.txtName.TabIndex = 8;
             // 
             // txtUserNo
@@ -151,7 +155,7 @@ namespace Tracking_Project
             this.txtUserNo.Location = new System.Drawing.Point(186, 18);
             this.txtUserNo.Name = "txtUserNo";
             this.txtUserNo.ReadOnly = true;
-            this.txtUserNo.Size = new System.Drawing.Size(213, 26);
+            this.txtUserNo.Size = new System.Drawing.Size(213, 27);
             this.txtUserNo.TabIndex = 9;
             // 
             // label3
@@ -160,7 +164,7 @@ namespace Tracking_Project
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 25);
+            this.label3.Size = new System.Drawing.Size(105, 25);
             this.label3.TabIndex = 10;
             this.label3.Text = "Surname";
             // 
@@ -170,7 +174,7 @@ namespace Tracking_Project
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 25);
+            this.label2.Size = new System.Drawing.Size(72, 25);
             this.label2.TabIndex = 11;
             this.label2.Text = "Name";
             // 
@@ -180,7 +184,7 @@ namespace Tracking_Project
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 25);
+            this.label1.Size = new System.Drawing.Size(168, 25);
             this.label1.TabIndex = 12;
             this.label1.Text = "Username No. ";
             // 
@@ -199,7 +203,7 @@ namespace Tracking_Project
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(12, 170);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(117, 25);
+            this.label9.Size = new System.Drawing.Size(125, 25);
             this.label9.TabIndex = 18;
             this.label9.Text = "Task State";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -210,7 +214,7 @@ namespace Tracking_Project
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(12, 227);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 25);
+            this.label6.Size = new System.Drawing.Size(58, 25);
             this.label6.TabIndex = 18;
             this.label6.Text = "Title";
             this.label6.Click += new System.EventHandler(this.label9_Click);
@@ -220,7 +224,7 @@ namespace Tracking_Project
             this.txtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitle.Location = new System.Drawing.Point(88, 228);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(327, 26);
+            this.txtTitle.Size = new System.Drawing.Size(327, 27);
             this.txtTitle.TabIndex = 1;
             // 
             // textBox1
@@ -238,7 +242,7 @@ namespace Tracking_Project
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(12, 279);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 25);
+            this.label7.Size = new System.Drawing.Size(94, 25);
             this.label7.TabIndex = 18;
             this.label7.Text = "Content";
             this.label7.Click += new System.EventHandler(this.label9_Click);
@@ -287,6 +291,7 @@ namespace Tracking_Project
             this.Name = "FrmTask";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTask";
+            this.Load += new System.EventHandler(this.FrmTask_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);

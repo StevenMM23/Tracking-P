@@ -215,6 +215,8 @@ namespace Tracking_Project
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(194, 27);
             this.txtSalary.TabIndex = 4;
+            this.txtSalary.TextChanged += new System.EventHandler(this.txtSalary_TextChanged);
+            this.txtSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalary_KeyPress);
             // 
             // label6
             // 
